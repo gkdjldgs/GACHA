@@ -12,30 +12,24 @@ func gamba(result):
 #pity is how many total pulls you've done, while roll is the number that determines your result
 	pity += 1
 	star4pity += 1
-	var roll = randi_range(1,70)
+	var roll = randi_range(1,90)
 	var divisor = roll % 10
 	if roll == 66:
 		result = star5()
-		print('g')
 	elif star4pity == 10:
 		result = star4()
 		star4pity = 0
-		print('p')
 	elif divisor == 0:
 		result = star4()
-		print('p')
 	elif pity >= 55:
 		var luck = pity - 55
 		var star5pity = randi_range(luck,15)
 		if star5pity == 15:
 			pity = 0
 			result = star5()
-			print('g')
 		else:
 			result = star3()
-			print('b')
 	else:	
-		print('b')
 		result = star3()
 	print(result)
 	return result
