@@ -23,6 +23,10 @@ autoload="*res://autoload.gd"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[gui]
+
+theme/custom_font="uid://dhpwyq3q2dahv"
+
 [rendering]
 
 renderer/rendering_method="mobile"
