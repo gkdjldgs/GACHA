@@ -6,6 +6,7 @@ var star5pity := 0
 var star4pity := 0
 var randomizes = 0
 var fiftes = false
+var cash = 1000
 #func that aims to return a random number based on rolls
 func gamba(result):
 #pity is how many total pulls you've done, while roll is the number that determines your result
@@ -22,7 +23,6 @@ func gamba(result):
 		print('p')
 	elif divisor == 0:
 		result = star4()
-		pity += 1
 		print('p')
 	elif pity >= 55:
 		var luck = pity - 55
@@ -32,7 +32,6 @@ func gamba(result):
 			result = star5()
 			print('g')
 		else:
-			pity += 1
 			result = star3()
 			print('b')
 	else:	

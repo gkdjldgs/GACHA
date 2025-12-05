@@ -1,5 +1,5 @@
-extends Button
-
+extends RichTextLabel
+var TEXT = str('VEGGIE BALLS: ')
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,13 +8,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
-
-func _on_pressed() -> void:
-	if autoload.cash >= 100:
-		autoload.cash -= 100
-		var test = ''
-		var text = autoload.gamba(test)
-	else:
-		pass
+	var text = str(TEXT, str(autoload.cash))
+	self.text = text
