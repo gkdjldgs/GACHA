@@ -47,13 +47,15 @@ func star3():
 	elif randomizes == 4:
 		return str('SMYCKA')
 func star4():
-	randomizes = randi_range(1,3)
+	randomizes = randi_range(1,4)
 	if randomizes == 1:
-		return str('UPPSTA')
+		return str('DJUNGLEORM')
 	elif randomizes == 2:
-		return str('BILLY')
+		return str(' UPPSTÅ (Storage Bag)')
 	elif randomizes == 3:
-		return str('VAPPEBY')
+		return str('KRAMIG')
+	elif randomizes == 4:
+		return str('GOSIG RATTA')
 		
 func star5():
 	if fiftes == true:
@@ -62,10 +64,10 @@ func star5():
 	elif fiftes == false:
 		randomizes = randi_range(1,2)
 		if randomizes == 1:
-			return str('Blahaj')
+			return str('BLAHAJ')
 		elif randomizes == 2:
 			fiftes = true
-			return str('DJUNGLESKOG (Bear)')
+			return str('DJUNGLESKOG')
 			
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
