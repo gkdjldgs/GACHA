@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://vu4t10v045kr"]
+
+[ext_resource type="Texture2D" uid="uid://drqo4dev1ripj" path="res://spotlights/spotlightone.png" id="1_nmb52"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Spotlightone" type="Sprite2D" parent="."]
+position = Vector2(626, 264)
+texture = ExtResource("1_nmb52")
