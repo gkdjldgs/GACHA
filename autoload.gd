@@ -60,7 +60,7 @@ func star4():
 func star5():
 	if fiftes == true:
 		fiftes = false
-		return str('Blahaj')
+		return str('BLAHAJ')
 	elif fiftes == false:
 		randomizes = randi_range(1,2)
 		if randomizes == 1:

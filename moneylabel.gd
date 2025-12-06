@@ -1,5 +1,5 @@
 extends RichTextLabel
-var TEXT = str('VEGGIE BALLS: ')
+var TEXT = str('SWEDISH MEATBALLS: ')
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
