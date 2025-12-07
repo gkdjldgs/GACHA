@@ -13,6 +13,7 @@ position = Vector2(578, 324)
 texture = ExtResource("1_nmb52")
 
 [node name="Spotlightright" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.33333334)
 position = Vector2(579, 324)
 texture = ExtResource("2_7wjqx")

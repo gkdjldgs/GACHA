@@ -7,6 +7,8 @@ var star4pity := 0
 var randomizes = 0
 var fiftes = false
 var cash = 1000
+var item := 'wow'
+var items := ''
 #func that aims to return a random number based on rolls
 func gamba(result):
 #pity is how many total pulls you've done, while roll is the number that determines your result
@@ -32,6 +34,7 @@ func gamba(result):
 	else:	
 		result = star3()
 	print(result)
+	items = result
 	return result
 	
 #randomize the actual value of 3stars - 5stars
@@ -77,7 +80,7 @@ func star5():
 			
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqow47bch5ocs"]
+[gd_scene load_steps=12 format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Script" uid="uid://crtdv5djku0ij" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://br66f7q3hdiit" path="res://autoload.gd" id="2_0xm2m"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bgrs056euiv00" path="res://images/nutton.png" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://238gdjwtd78m" path="res://fadetrans.tscn" id="10_4c57u"]
 [ext_resource type="PackedScene" uid="uid://vu4t10v045kr" path="res://pull.tscn" id="10_efxa6"]
+[ext_resource type="PackedScene" uid="uid://ci1l2wsgs2tmh" path="res://thegachaitem.tscn" id="11_efxa6"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ig7tw")
@@ -149,6 +150,20 @@ visible = false
 visible = false
 z_index = 3
 position = Vector2(-5, -1)
+
+[node name="Gachaitem" parent="." instance=ExtResource("11_efxa6")]
+visible = false
+z_index = 3
+position = Vector2(576, 381)
+
+[node name="Blocker" type="ColorRect" parent="."]
+visible = false
+z_index = 4
+offset_left = 230.0
+offset_top = 91.0
+offset_right = 969.0
+offset_bottom = 524.0
+color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="PULL!" to="PULL!" method="_on_pressed"]
 [connection signal="pressed" from="GO BACK" to="." method="_on_go_back_pressed"]
