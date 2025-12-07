@@ -57,7 +57,7 @@ func star4():
 	if randomizes == 1:
 		return str('DJUNGLEORM')
 	elif randomizes == 2:
-		return str(' UPPSTA (Storage Bag)')
+		return str('UPPSTA (Storage Bag)')
 	elif randomizes == 3:
 		return str('KRAMIG')
 	elif randomizes == 4:

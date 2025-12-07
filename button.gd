@@ -7,9 +7,10 @@ extends TextureButton
 @onready var lightsmiddle = $/root/Node2D/lights/Spotlightmiddle
 @onready var item = $/root/Node2D/Gachaitem
 @onready var itemanime = $/root/Node2D/Gachaitem/Sprite2D/AnimationPlayer
+@onready var blocker = $/root/Node2D/Blocker
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	blocker.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -46,9 +47,11 @@ func spotlights():
 	lightsleft.show()
 	lightsright.show()
 	await get_tree().create_timer(0.85).timeout
+	blocker.show()
 	lightsleft.hide()
 	lightsright.hide()
 	await get_tree().create_timer(1.60).timeout
+	blocker.hide()
 	lightsleft.show()
 	lightsright.show()
 	lightsmiddle.show()
