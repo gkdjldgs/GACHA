@@ -37,25 +37,31 @@ func gamba(result):
 #randomize the actual value of 3stars - 5stars
 
 func star3():
-	randomizes = randi_range(1,4)
+	randomizes = randi_range(1,5)
 	if randomizes == 1:
-		return str('VINTERFINT (Bottle)')
+		return str('VINTERFINT (BOTTLE)')
 	elif randomizes == 2:
-		return str('DRÖNJÖNS')
+			return str('DRONJONS')
 	elif randomizes == 3:
-		return str('VINTERFINT (Candle)')
+		return str('VINTERFINT (CANDLE)')
 	elif randomizes == 4:
 		return str('SMYCKA')
+	elif randomizes == 5:
+		return str('MALA')
+		
 func star4():
-	randomizes = randi_range(1,4)
+	randomizes = randi_range(1,5)
 	if randomizes == 1:
 		return str('DJUNGLEORM')
 	elif randomizes == 2:
-		return str(' UPPSTÅ (Storage Bag)')
+		return str(' UPPSTA (Storage Bag)')
 	elif randomizes == 3:
 		return str('KRAMIG')
 	elif randomizes == 4:
 		return str('GOSIG RATTA')
+	elif randomizes == 5:
+		return str('BOLBO')
+		
 		
 func star5():
 	if fiftes == true:
