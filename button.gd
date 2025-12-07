@@ -8,6 +8,9 @@ extends TextureButton
 @onready var item = $/root/Node2D/Gachaitem
 @onready var itemanime = $/root/Node2D/Gachaitem/Sprite2D/AnimationPlayer
 @onready var blocker = $/root/Node2D/Blocker
+@onready var bluelabel = $/root/Node2D/Blueitemname
+@onready var purplelabel = $/root/Node2D/Purpleitemname
+@onready var goldenlabel = $/root/Node2D/Goldenitemname
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	blocker.hide()
@@ -51,6 +54,9 @@ func spotlights():
 	lightsleft.hide()
 	lightsright.hide()
 	await get_tree().create_timer(1.60).timeout
+	bluelabel.bluematchup()
+	purplelabel.purplematchup()
+	goldenlabel.orangematchup()
 	blocker.hide()
 	lightsleft.show()
 	lightsright.show()

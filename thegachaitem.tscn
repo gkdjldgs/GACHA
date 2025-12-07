@@ -209,9 +209,9 @@ script = ExtResource("1_pdffa")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
 texture_filter = 1
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_78khs")
-animation = &"smycka"
+animation = &"mala"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 libraries = {
