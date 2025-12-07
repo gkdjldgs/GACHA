@@ -18,62 +18,74 @@
 script = ExtResource("1_mrnb4")
 
 [node name="Dronjonssquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(73, 249.99998)
 scale = Vector2(0.19, 0.19)
 texture = ExtResource("1_5a4yc")
 
 [node name="Malasquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(77, 359)
 scale = Vector2(0.19, 0.19)
 texture = ExtResource("2_jywwe")
 
 [node name="Symckasquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(76, 468.99997)
 scale = Vector2(0.19, 0.19)
 texture = ExtResource("3_47miu")
 
 [node name="Vinterfintbottlesquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(74, 572)
 scale = Vector2(0.19, 0.19)
 texture = ExtResource("4_0j71w")
 
 [node name="Vinterfintcandlesquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(72.99999, 147)
 scale = Vector2(0.19, 0.19)
 texture = ExtResource("5_bp7wq")
 
 [node name="Bolbosquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(323.5, 172.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_i8sox")
 
 [node name="Djungleormsquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(505, 173)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("7_mrnb4")
 
 [node name="Gossigrattasquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(703, 173)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_g0015")
 
 [node name="Kramigsquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(878, 173)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_sre7k")
 
 [node name="Uppstasquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1054.5, 172.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_84ncw")
 
 [node name="Blahajsquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(511, 421.99997)
 rotation = 0.6286487
 scale = Vector2(0.8531116, 0.8531116)
 texture = ExtResource("11_ae7c0")
 
 [node name="Djungelskogsquare" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(946, 445.00003)
 scale = Vector2(0.6214999, 0.6214999)
 texture = ExtResource("12_7kip4")
