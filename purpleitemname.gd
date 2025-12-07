@@ -20,7 +20,7 @@ func purplematchup():
 				self.text = str('DJUNGLEORM')
 				self.show()
 			'UPPSTA (Storage Bag)':
-				self.text = str('UPPSTA (Storage Bag)')
+				self.text = str('UPPSTA (STORAGE BAG)')
 				self.show()
 			'KRAMIG':
 				self.text = str('KRAMIG')

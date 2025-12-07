@@ -6,7 +6,7 @@ var star5pity := 0
 var star4pity := 0
 var randomizes = 0
 var fiftes = false
-var cash = 1000
+var cash = 100000
 var item := 'wow'
 var items := ''
 #func that aims to return a random number based on rolls

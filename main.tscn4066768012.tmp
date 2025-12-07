@@ -229,13 +229,6 @@ z_index = 7
 offset_right = 1152.0
 offset_bottom = 649.0
 
-[node name="skipbutton" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
-z_index = 5
-offset_right = 1154.0
-offset_bottom = 647.0
-
 [connection signal="pressed" from="PULL!" to="PULL!" method="_on_pressed"]
 [connection signal="pressed" from="GO BACK" to="." method="_on_go_back_pressed"]
 [connection signal="pressed" from="leavebutton" to="PULL!" method="_on_leavebutton_pressed"]
-[connection signal="pressed" from="skipbutton" to="PULL!" method="_on_skipbutton_pressed"]

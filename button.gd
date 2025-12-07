@@ -11,10 +11,13 @@ extends TextureButton
 @onready var bluelabel = $/root/Node2D/Blueitemname
 @onready var purplelabel = $/root/Node2D/Purpleitemname
 @onready var goldenlabel = $/root/Node2D/Goldenitemname
+@onready var leavebutton = $/root/Node2D/leavebutton
+@onready var skipbutton = $/root/Node2D/skipbutton
+var skip = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	blocker.hide()
-
+	skipbutton.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -32,35 +35,107 @@ func _on_pressed() -> void:
 func items():
 	pass
 func spotlights():
-	await get_tree().create_timer(0.15).timeout
-	rectangle.show()
-	animation.play('fadein')
-	await animation.animation_finished
-	lights.show()
-	lightsleft.hide()
-	lightsright.hide()
-	lightsmiddle.hide()
-	await get_tree().create_timer(0.65).timeout
-	lightsleft.show()
-	await get_tree().create_timer(0.75).timeout
-	lightsleft.hide()
-	await get_tree().create_timer(1).timeout
-	item.show()
+	skip = false
+	if skip != true:
+		skipbutton.show()
+		get_tree().create_timer(0.15).timeout
+		if skip == true:
+			showstuffs()
+			return
+		rectangle.show()
+		animation.play('fadein')
+		await animation.animation_finished
+		if skip == true:
+			showstuffs()
+			return
+		lights.show()
+		lightsleft.hide()
+		lightsright.hide()
+		lightsmiddle.hide()
+		await get_tree().create_timer(0.65).timeout
+		if skip == true:
+			showstuffs()
+			return
+		lightsleft.show()
+		if skip == true:
+			showstuffs()
+			return
+		await get_tree().create_timer(0.75).timeout
+		if skip == true:
+			showstuffs()
+			return
+		lightsleft.hide()
+		if skip == true:
+			showstuffs()
+			return
+		await get_tree().create_timer(1).timeout
+		if skip == true:
+			showstuffs()
+			return
+		item.show()
+		item.gamble()
+		lightsleft.show()
+		lightsright.show()
+		if skip == true:
+			showstuffs()
+			return
+		await get_tree().create_timer(0.85).timeout
+		if skip == true:
+			showstuffs()
+			return
+		blocker.show()
+		lightsleft.hide()
+		lightsright.hide()
+		if skip == true:
+			showstuffs()
+			return
+		await get_tree().create_timer(1.60).timeout
+		if skip == true:
+			showstuffs()
+			return
+		bluelabel.bluematchup()
+		purplelabel.purplematchup()
+		goldenlabel.orangematchup()
+		blocker.hide()
+		lightsleft.show()
+		lightsright.show()
+		lightsmiddle.show()
+		leavebutton.show()
+		if skip == true:
+			showstuffs()
+			return
+	elif skip == true:
+		showstuffs()
+		return
+func showstuffs():
 	item.gamble()
-	lightsleft.show()
-	lightsright.show()
-	await get_tree().create_timer(0.85).timeout
-	blocker.show()
-	lightsleft.hide()
-	lightsright.hide()
-	await get_tree().create_timer(1.60).timeout
 	bluelabel.bluematchup()
 	purplelabel.purplematchup()
 	goldenlabel.orangematchup()
 	blocker.hide()
+	itemanime.play('mala')
+	leavebutton.show()
 	lightsleft.show()
 	lightsright.show()
 	lightsmiddle.show()
+	rectangle.show()
+	item.show()
+	bluelabel.bluematchup()
+	purplelabel.purplematchup()
+	goldenlabel.orangematchup()
+func _on_leavebutton_pressed() -> void:
+	leavebutton.hide()
+	lightsleft.hide()
+	lightsright.hide()
+	lightsmiddle.hide()
+	rectangle.hide()
+	item.hide()
+	bluelabel.hide()
+	purplelabel.hide()
+	goldenlabel.hide()
 	
-func projectanimation():
-	pass
+
+
+func _on_skipbutton_pressed() -> void:
+	skipbutton.hide()
+	skip = true
