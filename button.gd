@@ -133,7 +133,7 @@ func _on_leavebutton_pressed() -> void:
 	bluelabel.hide()
 	purplelabel.hide()
 	goldenlabel.hide()
-	
+
 
 
 func _on_skipbutton_pressed() -> void:

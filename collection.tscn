@@ -1,16 +1,21 @@
-[gd_scene load_steps=14 format=3 uid="uid://uelferau58qy"]
+[gd_scene load_steps=19 format=3 uid="uid://uelferau58qy"]
 
 [ext_resource type="Texture2D" uid="uid://baa6pcoypgymg" path="res://gachaitems/3stars/dronjonssquare.png" id="1_5a4yc"]
 [ext_resource type="Script" uid="uid://b0p0lcpykpyfu" path="res://collection.gd" id="1_mrnb4"]
 [ext_resource type="Texture2D" uid="uid://cu1ldkm12tnan" path="res://gachaitems/3stars/malasquare.png" id="2_jywwe"]
 [ext_resource type="Texture2D" uid="uid://cchdodmwml8t0" path="res://gachaitems/3stars/symckasquare.png" id="3_47miu"]
+[ext_resource type="Script" uid="uid://bxnfvhi25t6mv" path="res://labeldronjon.gd" id="3_g0015"]
 [ext_resource type="Texture2D" uid="uid://bswlx34odkt4w" path="res://gachaitems/3stars/vinterfintbottlesquare.png" id="4_0j71w"]
 [ext_resource type="Texture2D" uid="uid://bqfadjy1mgur3" path="res://gachaitems/3stars/vinterfintcandlesquare.png" id="5_bp7wq"]
+[ext_resource type="Script" uid="uid://cwaappvw762yc" path="res://malalabel.gd" id="5_sre7k"]
 [ext_resource type="Texture2D" uid="uid://evjonjsfyetg" path="res://gachaitems/4stars/bolbosquare.png" id="6_i8sox"]
+[ext_resource type="Script" uid="uid://7ej6i02xqr5c" path="res://symckalabel.gd" id="7_84ncw"]
 [ext_resource type="Texture2D" uid="uid://db7ryxvjjk5eg" path="res://gachaitems/4stars/djungleormsquare.png" id="7_mrnb4"]
 [ext_resource type="Texture2D" uid="uid://lkm01el156t7" path="res://gachaitems/4stars/gossigrattasquare.png" id="8_g0015"]
+[ext_resource type="Script" uid="uid://bgge3dfmv5muy" path="res://vfblabel.gd" id="9_ae7c0"]
 [ext_resource type="Texture2D" uid="uid://bugimv1e8137l" path="res://gachaitems/4stars/kramigsquare.png" id="9_sre7k"]
 [ext_resource type="Texture2D" uid="uid://mgrxsauwolfh" path="res://gachaitems/4stars/uppstasquare.png" id="10_84ncw"]
+[ext_resource type="Script" uid="uid://ccbsruj6fsbr7" path="res://vfc.gd" id="11_7kip4"]
 [ext_resource type="Texture2D" uid="uid://cmh245e0u2dbc" path="res://gachaitems/5stars/blahajsquare.png" id="11_ae7c0"]
 [ext_resource type="Texture2D" uid="uid://e6u1x57aru8f" path="res://gachaitems/5stars/djungelskogsquare.png" id="12_7kip4"]
 
@@ -18,74 +23,118 @@
 script = ExtResource("1_mrnb4")
 
 [node name="Dronjonssquare" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(73, 249.99998)
 scale = Vector2(0.19, 0.19)
 texture = ExtResource("1_5a4yc")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Dronjonssquare"]
+texture_filter = 1
+offset_left = 278.94736
+offset_top = -242.1052
+offset_right = 1126.3157
+offset_bottom = -136.84201
+theme_override_colors/default_color = Color(0.69803923, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "DRONJONS"
+scroll_active = false
+script = ExtResource("3_g0015")
+
 [node name="Malasquare" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(77, 359)
 scale = Vector2(0.19, 0.19)
 texture = ExtResource("2_jywwe")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Malasquare"]
+texture_filter = 1
+offset_left = 263.15787
+offset_top = -178.94739
+offset_right = 1063.1578
+offset_bottom = 252.63159
+theme_override_colors/default_color = Color(0.69803923, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "MALA"
+script = ExtResource("5_sre7k")
+
 [node name="Symckasquare" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(76, 468.99997)
 scale = Vector2(0.19, 0.19)
 texture = ExtResource("3_47miu")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Symckasquare"]
+offset_left = 273.6842
+offset_top = -184.21037
+offset_right = 1221.0526
+offset_bottom = 294.73712
+theme_override_colors/default_color = Color(0.69803923, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "SYMCKA
+"
+script = ExtResource("7_84ncw")
+
 [node name="Vinterfintbottlesquare" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(74, 572)
 scale = Vector2(0.19, 0.19)
 texture = ExtResource("4_0j71w")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Vinterfintbottlesquare"]
+offset_left = 152.63158
+offset_top = -242.10526
+offset_right = 1068.421
+offset_bottom = 42.105194
+theme_override_colors/default_color = Color(0.69803923, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "VINTERFINT BOTTLE"
+script = ExtResource("9_ae7c0")
+
 [node name="Vinterfintcandlesquare" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(72.99999, 147)
 scale = Vector2(0.19, 0.19)
 texture = ExtResource("5_bp7wq")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Vinterfintcandlesquare"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("11_7kip4")
+
 [node name="Bolbosquare" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(323.5, 172.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_i8sox")
 
 [node name="Djungleormsquare" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(505, 173)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("7_mrnb4")
 
 [node name="Gossigrattasquare" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(703, 173)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_g0015")
 
 [node name="Kramigsquare" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(878, 173)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_sre7k")
 
 [node name="Uppstasquare" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1054.5, 172.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_84ncw")
 
 [node name="Blahajsquare" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(511, 421.99997)
+position = Vector2(526, 437)
 rotation = 0.6286487
 scale = Vector2(0.8531116, 0.8531116)
 texture = ExtResource("11_ae7c0")
 
 [node name="Djungelskogsquare" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(946, 445.00003)
+position = Vector2(946.00006, 460.00003)
 scale = Vector2(0.6214999, 0.6214999)
 texture = ExtResource("12_7kip4")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1156.0
+offset_bottom = 645.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

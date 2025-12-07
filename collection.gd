@@ -25,55 +25,48 @@ var djungelskoG = int(0)
 @onready var uppsta = $Uppstasquare
 @onready var blahaj = $Blahajsquare
 @onready var djungleskog = $Djungelskogsquare
-
+func _ready() -> void:
+	collection.display()
 func display():
 	var item = autoload.items
 	match item:
 		'DRONJONS':
-			dronjoN.show()
 			dronjoN += 1
 		'VINTERFINT (BOTTLE)':
-			vittle.show()
 			vinterfintbottlE += 1
 		'VINTERFINT (CANDLE)':
-			vandle.show()
 			vinterfintcandlE += 1
 		'SMYCKA':
-			symcka.show()
 			symckA += 1
 		'MALA':
-			mala.show()
 			malA += 1
 		'BOLBO':
 			bolbo.show()
 			bolbO += 1
 		'DJUNGLEORM':
-			djungleorm.show()
 			djungleorM += 1
 		'UPPSTA (Storage Bag)':
-			uppsta.show()
 			uppstA += 1
 		'KRAMIG':
-			kramig.show()
 			kramiG += 1
 		'GOSIG RATTA':
-			gossigratta.show()
 			gossigrattA += 1
 		'BLAHAJ':
-			blahaj.show()
 			blahaJ += 1
 		'DJUNGLESKOG':
-			djungleskog.show()
 			djungelskoG += 1
 		null:
 			pass
 		_:
 			pass
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file('res://main.tscn')
