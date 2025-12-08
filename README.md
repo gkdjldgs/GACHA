@@ -5,6 +5,10 @@ its a dumb gacha game..
 
 This is good news..
 
+THE GAME:
+
+https://gkdjldgs.itch.io/ikea-gambling-simulator
+
 THE THEME:
 	
 	This weeks theme was anything, so I really embraced it by making anything, where you can get anything
