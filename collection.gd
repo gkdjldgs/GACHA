@@ -12,19 +12,7 @@ var kramiG = int(0)
 var uppstA = int(0)
 var blahaJ = int(0)
 var djungelskoG = int(0)
-#connect to the png variable
-@onready var dronjon = $Dronjonssquare
-@onready var mala = $Malasquare
-@onready var symcka = $Symckasquare
-@onready var vittle = $Vinterfintbottlesquare
-@onready var vandle = $Vinterfintcandlesquare
-@onready var gossigratta = $Gossigrattasquare 
-@onready var bolbo = $Bolbosquare
-@onready var djungleorm = $Djungleormsquare
-@onready var kramig = $Kramigsquare
-@onready var uppsta = $Uppstasquare
-@onready var blahaj = $Blahajsquare
-@onready var djungleskog = $Djungelskogsquare
+
 func _ready() -> void:
 	collection.display()
 func display():
@@ -41,7 +29,6 @@ func display():
 		'MALA':
 			malA += 1
 		'BOLBO':
-			bolbo.show()
 			bolbO += 1
 		'DJUNGLEORM':
 			djungleorM += 1

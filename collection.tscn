@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://uelferau58qy"]
+[gd_scene load_steps=28 format=3 uid="uid://uelferau58qy"]
 
 [ext_resource type="Texture2D" uid="uid://baa6pcoypgymg" path="res://gachaitems/3stars/dronjonssquare.png" id="1_5a4yc"]
 [ext_resource type="Script" uid="uid://b0p0lcpykpyfu" path="res://collection.gd" id="1_mrnb4"]
@@ -18,6 +18,15 @@
 [ext_resource type="Script" uid="uid://ccbsruj6fsbr7" path="res://vfc.gd" id="11_7kip4"]
 [ext_resource type="Texture2D" uid="uid://cmh245e0u2dbc" path="res://gachaitems/5stars/blahajsquare.png" id="11_ae7c0"]
 [ext_resource type="Texture2D" uid="uid://e6u1x57aru8f" path="res://gachaitems/5stars/djungelskogsquare.png" id="12_7kip4"]
+[ext_resource type="Script" uid="uid://vdw078fqgqjs" path="res://bolbolabel.gd" id="13_xajaa"]
+[ext_resource type="Texture2D" uid="uid://bbybhpsvrnygr" path="res://images/light-beige-paper-texture-great-as-background-high-resolution-photo-light-beige-paper-texture-great-as-background-147983096 (1).png" id="14_h5b63"]
+[ext_resource type="Script" uid="uid://dmjq83k40vjfn" path="res://djungleormlabel.gd" id="15_5w4to"]
+[ext_resource type="Script" uid="uid://cvlro3kw1pbdu" path="res://gossigratta.gd" id="17_fb0dq"]
+[ext_resource type="Script" uid="uid://dgo6f0hrcqqin" path="res://kramigsquare.gd" id="19_75s46"]
+[ext_resource type="Script" uid="uid://ch88n1gbcpl5l" path="res://uppsta.gd" id="21_tj0ev"]
+[ext_resource type="Script" uid="uid://csc226gc26ojy" path="res://blahaj.gd" id="23_0b34o"]
+[ext_resource type="Script" uid="uid://b86o0oo5tavk4" path="res://djungleskog.gd" id="25_m1vpp"]
+[ext_resource type="Texture2D" uid="uid://coi7k3sswjagf" path="res://images/collection.png" id="27_y1d8t"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_mrnb4")
@@ -77,6 +86,7 @@ scale = Vector2(0.19, 0.19)
 texture = ExtResource("4_0j71w")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Vinterfintbottlesquare"]
+texture_filter = 1
 offset_left = 152.63158
 offset_top = -242.10526
 offset_right = 1068.421
@@ -92,8 +102,14 @@ scale = Vector2(0.19, 0.19)
 texture = ExtResource("5_bp7wq")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Vinterfintcandlesquare"]
-offset_right = 40.0
-offset_bottom = 40.0
+texture_filter = 1
+offset_left = 263.15793
+offset_top = -84.210526
+offset_right = 1115.7896
+offset_bottom = 231.5789
+theme_override_colors/default_color = Color(0.69803923, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "VINTERFINT"
 script = ExtResource("11_7kip4")
 
 [node name="Bolbosquare" type="Sprite2D" parent="."]
@@ -101,40 +117,126 @@ position = Vector2(323.5, 172.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_i8sox")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Bolbosquare"]
+texture_filter = 1
+offset_left = -338.0
+offset_top = 310.0
+offset_right = 294.0
+offset_bottom = 616.0
+theme_override_colors/default_color = Color(0.47058824, 0.07450981, 0.47058824, 1)
+theme_override_font_sizes/normal_font_size = 115
+text = "BOBLO"
+script = ExtResource("13_xajaa")
+
+[node name="LightBeigePaperTextureGreatAsBackgroundHighResolutionPhotoLightBeigePaperTextureGreatAsBackground147983096(1)" type="Sprite2D" parent="Bolbosquare"]
+z_index = -2
+position = Vector2(989.73035, 770)
+scale = Vector2(1.5730337, 1.5730337)
+texture = ExtResource("14_h5b63")
+
 [node name="Djungleormsquare" type="Sprite2D" parent="."]
 position = Vector2(505, 173)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("7_mrnb4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Djungleormsquare"]
+texture_filter = 1
+offset_left = -484.0
+offset_top = 310.0
+offset_right = 724.0
+offset_bottom = 662.0
+theme_override_colors/default_color = Color(0.47058824, 0.07450981, 0.47058824, 1)
+theme_override_font_sizes/normal_font_size = 115
+text = "DJUNGLEORM"
+script = ExtResource("15_5w4to")
 
 [node name="Gossigrattasquare" type="Sprite2D" parent="."]
 position = Vector2(703, 173)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_g0015")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Gossigrattasquare"]
+texture_filter = 1
+offset_left = -300.0
+offset_top = 310.0
+offset_right = 324.0
+offset_bottom = 798.0
+theme_override_colors/default_color = Color(0.47058824, 0.07450981, 0.47058824, 1)
+theme_override_font_sizes/normal_font_size = 115
+text = "GOSSIG RATTA"
+script = ExtResource("17_fb0dq")
+
 [node name="Kramigsquare" type="Sprite2D" parent="."]
 position = Vector2(878, 173)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_sre7k")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Kramigsquare"]
+offset_left = -304.0
+offset_top = 310.0
+offset_right = 380.0
+offset_bottom = 642.0
+theme_override_colors/default_color = Color(0.47058824, 0.07450981, 0.47058824, 1)
+theme_override_font_sizes/normal_font_size = 115
+text = "KRAMIG"
+script = ExtResource("19_75s46")
 
 [node name="Uppstasquare" type="Sprite2D" parent="."]
 position = Vector2(1054.5, 172.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_84ncw")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Uppstasquare"]
+offset_left = -294.0
+offset_top = 310.0
+offset_right = 378.0
+offset_bottom = 602.0
+theme_override_colors/default_color = Color(0.47058824, 0.07450981, 0.47058824, 1)
+theme_override_font_sizes/normal_font_size = 115
+text = "UPPSTA"
+script = ExtResource("21_tj0ev")
+
 [node name="Blahajsquare" type="Sprite2D" parent="."]
-position = Vector2(526, 437)
+position = Vector2(526.00006, 406.00003)
 rotation = 0.6286487
-scale = Vector2(0.8531116, 0.8531116)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("11_ae7c0")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Blahajsquare"]
+offset_left = -190.32843
+offset_top = 370.81418
+offset_right = 444.86627
+offset_bottom = 515.24
+rotation = -0.62831855
+theme_override_colors/default_color = Color(0.7764706, 0.2784314, 0, 1)
+theme_override_font_sizes/normal_font_size = 120
+text = "BLAHAJ"
+script = ExtResource("23_0b34o")
+
 [node name="Djungelskogsquare" type="Sprite2D" parent="."]
-position = Vector2(946.00006, 460.00003)
-scale = Vector2(0.6214999, 0.6214999)
+position = Vector2(992.99994, 408.99997)
+scale = Vector2(0.4322261, 0.4322261)
 texture = ExtResource("12_7kip4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Djungelskogsquare"]
+offset_left = -668.63135
+offset_top = 330.84546
+offset_right = 1080.4534
+offset_bottom = 628.495
+theme_override_colors/default_color = Color(0.7764706, 0.2784314, 0, 1)
+theme_override_font_sizes/normal_font_size = 115
+text = "DJUNGLESKOG"
+script = ExtResource("25_m1vpp")
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
 offset_right = 1156.0
 offset_bottom = 645.0
+
+[node name="Collection" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(543, 57)
+scale = Vector2(1.9210526, 1.9210526)
+texture = ExtResource("27_y1d8t")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
