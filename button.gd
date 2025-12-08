@@ -1,4 +1,5 @@
 extends TextureButton
+#these are the vairables used to make very simple animations and stuff by using timers and just the get_tree().create_timer
 @onready var rectangle = $/root/Node2D/ColorRect2
 @onready var animation = $/root/Node2D/ColorRect2/AnimationPlayer
 @onready var lights = $/root/Node2D/lights
@@ -15,6 +16,7 @@ extends TextureButton
 @onready var skipbutton = $/root/Node2D/skipbutton
 var skip = false
 # Called when the node enters the scene tree for the first time.
+#make sure these 2 dont appear randomly specifically
 func _ready() -> void:
 	blocker.hide()
 	skipbutton.hide()
@@ -23,7 +25,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
+#so you dont just gamble infintely(though it basicaly is)
 func _on_pressed() -> void:
 	if autoload.cash >= 100:
 		autoload.cash -= 100
@@ -35,6 +37,9 @@ func _on_pressed() -> void:
 func items():
 	pass
 func spotlights():
+	#i didn't do any actual animation for this! i choose the laziest route and it worked out pretty well I gotta say
+	#by the laziest route I mean await get_tree().create_timer.timeout 15 times
+	#and don't even get me started on the if skip == true
 	skip = false
 	if skip != true:
 		skipbutton.show()

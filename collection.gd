@@ -16,6 +16,8 @@ var djungelskoG = int(0)
 func _ready() -> void:
 	collection.display()
 func display():
+	#This was a way for me to easily increase the amount of the stuff the player had for each item
+	#by just bruteforcing it with match(which i did for alot of the code)	
 	var item = autoload.items
 	match item:
 		'DRONJONS':
@@ -56,4 +58,6 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
+	#change the scene to actual gambling place so you can get more hours!
+	
 	get_tree().change_scene_to_file('res://main.tscn')
